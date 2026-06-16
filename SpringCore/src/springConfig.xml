@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+            <bean id ="obj" class="Spring1.product">
+            <property name="pid" value="12"/>
+            <property name="pname" value="james"/>
+            <property name="psalary" value="120000"/>
+           <!--   <constructor-arg value ="1"/>
+            <constructor-arg value ="james"/>
+            <constructor-arg value ="13000"/> -->         
+            </bean>
+            <bean id = "obj1" class="Spring1.Company">
+            <!--  <property name="cid" value="120"/>
+            <property name="cname" value="cvcorp"/>
+            <property name="cloc" value="Kphb"/>
+            <property name="p" ref="obj"/>-->
+            <constructor-arg value ="10"/>
+            <constructor-arg value ="jp morgan"/>
+            <constructor-arg value ="hitechcity"/>
+             <constructor-arg>
+         <ref bean="obj"/>
+         </constructor-arg>
+            </bean>
+            </beans>
